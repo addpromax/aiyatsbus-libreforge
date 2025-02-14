@@ -1,0 +1,36 @@
+name: ${pluginName}
+version: ${version}
+main: com.mcstarrysky.aiyatsbus.libreforge.AiyatsbusLibreforgePlugin
+api-version: 1.16
+authors: [ Mical ]
+depend:
+  - eco
+  - Aiyatsbus
+softdepend:
+  - libreforge
+loadafter:
+  - Aiyatsbus
+
+commands:
+  aiyatsbuslibreforge:
+    description: Base Command
+    permission: aiyatsbus.libreforge.command
+
+permissions:
+  aiyatsbus.libreforge.*:
+    description: All aiyatsbus libreforge permissions
+    default: op
+    children:
+      aiyatsbus.libreforge.command.*: true
+  aiyatsbus.libreforge.command.*:
+    description: All commands
+    default: op
+    children:
+      aiyatsbus.libreforge.command.reload: true
+      aiyatsbus.libreforge.command.migrate: true
+  aiyatsbus.libreforge.command.reload:
+    description: Allows reloading the config
+    default: op
+  aiyatsbus.libreforge.command.migrate:
+    description: Allows migrating from EcoEnchants
+    default: op
