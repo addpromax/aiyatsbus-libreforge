@@ -1,6 +1,6 @@
 name: ${pluginName}
 version: ${version}
-main: com.mcstarrysky.aiyatsbus.libreforge.AiyatsbusLibreforgePlugin
+main: cc.polarastrum.aiyatsbus.libreforge.AiyatsbusLibreforgePlugin
 api-version: 1.16
 authors: [ Mical ]
 depend:
