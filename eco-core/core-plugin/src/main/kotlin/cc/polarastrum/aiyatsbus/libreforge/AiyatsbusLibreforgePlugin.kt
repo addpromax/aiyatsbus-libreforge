@@ -16,6 +16,7 @@ import com.willfp.libreforge.loader.configs.ConfigCategory
 import com.willfp.libreforge.registerHolderPlaceholderProvider
 import com.willfp.libreforge.registerHolderProvider
 import com.willfp.libreforge.registerSpecificRefreshFunction
+import org.bukkit.Bukkit
 import org.bukkit.entity.LivingEntity
 
 /**
@@ -60,6 +61,8 @@ class AiyatsbusLibreforgePlugin : LibreforgePlugin() {
         }
 
         AiyatsbusCommand.init()
+
+        Bukkit.getConsoleSender().sendMessage(langYml.getMessage("loaded").replace("{counts}", LibreforgeEnchants.values().size.toString()))
     }
 
     override fun loadPluginCommands(): MutableList<PluginCommand> {

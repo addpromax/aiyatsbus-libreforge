@@ -1,5 +1,6 @@
 package cc.polarastrum.aiyatsbus.libreforge.command
 
+import cc.polarastrum.aiyatsbus.libreforge.enchant.LibreforgeEnchants
 import com.willfp.eco.core.EcoPlugin
 import com.willfp.eco.core.Prerequisite
 import com.willfp.eco.core.command.impl.Subcommand
@@ -20,6 +21,7 @@ class CommandReload(plugin: EcoPlugin) : Subcommand(plugin, "reload", "aiyatsbus
         Bukkit.getOnlinePlayers().forEach { player ->
             player.updateInventory()
         }
+        Bukkit.getConsoleSender().sendMessage(plugin.langYml.getMessage("loaded").replace("{counts}", LibreforgeEnchants.values().size.toString()))
         if (Prerequisite.HAS_1_21.isMet) {
             sender.sendMessage(plugin.langYml.getMessage("reloaded-121"))
         } else if (Prerequisite.HAS_1_20_3.isMet) {

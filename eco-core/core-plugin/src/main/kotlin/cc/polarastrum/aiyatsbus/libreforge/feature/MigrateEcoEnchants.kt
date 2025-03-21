@@ -46,6 +46,7 @@ object MigrateEcoEnchants {
         "pickaxe" to listOf("镐"),
         "axe" to listOf("斧"),
         "hoe" to listOf("锄"),
+        "sword" to listOf("剑"),
         "shovel" to listOf("铲"),
         "helmet" to listOf("头盔"),
         "chestplate" to listOf("胸甲"),
