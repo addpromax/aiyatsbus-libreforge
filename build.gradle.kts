@@ -1,7 +1,7 @@
 plugins {
     java
     `java-library`
-    kotlin("jvm") version "1.9.20"
+    kotlin("jvm") version "2.1.0"
     id("com.github.johnrengelman.shadow") version "8.0.0"
     id("com.willfp.libreforge-gradle-plugin") version "1.0.2"
 }
