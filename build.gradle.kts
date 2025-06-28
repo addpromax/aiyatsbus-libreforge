@@ -38,7 +38,7 @@ allprojects {
     dependencies {
         compileOnly("com.willfp:eco:6.73.4")
         compileOnly("io.papermc.paper:paper-api:1.19.2-R0.1-SNAPSHOT")
-        compileOnly("cc.polarastrum:Aiyatsbus:1.1.0")
+        compileOnly("cc.polarastrum:Aiyatsbus:1.0.0")
         compileOnly("com.github.ben-manes.caffeine:caffeine:3.1.5")
         compileOnly("org.jetbrains:annotations:23.0.0")
         compileOnly("org.jetbrains.kotlin:kotlin-stdlib:1.9.20")
