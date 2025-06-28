@@ -40,7 +40,15 @@ class AiyatsbusLibreforgePlugin : LibreforgePlugin() {
             LibreforgeEnchants
         )
     }
-
+    
+    override fun onEnable() {
+      val registerer = Aiyatsbus.api().getEnchantmentRegisterer()
+        if (registerer is ModernEnchantmentRegisterer) {
+            registerer.replaceRegistry()
+            }
+        super.onEnable()
+    }
+    
     override fun handleEnable() {
         registerHolderProvider(LibreforgeEnchantFinder.toHolderProvider())
 
@@ -56,9 +64,6 @@ class AiyatsbusLibreforgePlugin : LibreforgePlugin() {
     }
 
     override fun handleAfterLoad() {
-        if (Prerequisite.HAS_1_21.isMet) {
-            (Aiyatsbus.api().getEnchantmentRegisterer() as ModernEnchantmentRegisterer).replaceRegistry()
-        }
 
         AiyatsbusCommand.init()
 
