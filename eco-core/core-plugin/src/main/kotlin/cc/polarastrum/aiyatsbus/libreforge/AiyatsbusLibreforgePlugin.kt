@@ -64,8 +64,11 @@ class AiyatsbusLibreforgePlugin : LibreforgePlugin() {
         AiyatsbusCommand.init()
 
         Bukkit.getConsoleSender().sendMessage(langYml.getMessage("loaded").replace("{counts}", LibreforgeEnchants.values().size.toString()))
-
-        registerer.freezeRegistry()
+        
+        val registerer = Aiyatsbus.api().getEnchantmentRegisterer()
+        if (registerer is ModernEnchantmentRegisterer) {
+            registerer.freezeRegistry()
+        }
     }
 
     override fun loadPluginCommands(): MutableList<PluginCommand> {
