@@ -34,7 +34,7 @@ class AiyatsbusLibreforgePlugin : LibreforgePlugin() {
     init {
         val registerer = Aiyatsbus.api().getEnchantmentRegisterer()
         if (registerer is ModernEnchantmentRegisterer) {
-            registerer.replaceRegistry()
+            registerer.unfreezeRegistry()
         }
         plugin = this
     }
