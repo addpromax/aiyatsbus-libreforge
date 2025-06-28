@@ -32,6 +32,10 @@ lateinit var plugin: AiyatsbusLibreforgePlugin
 class AiyatsbusLibreforgePlugin : LibreforgePlugin() {
 
     init {
+        val registerer = Aiyatsbus.api().getEnchantmentRegisterer()
+        if (registerer is ModernEnchantmentRegisterer) {
+            registerer.replaceRegistry()
+        }
         plugin = this
     }
 
@@ -39,14 +43,6 @@ class AiyatsbusLibreforgePlugin : LibreforgePlugin() {
         return listOf(
             LibreforgeEnchants
         )
-    }
-    
-    override fun onEnable() {
-      val registerer = Aiyatsbus.api().getEnchantmentRegisterer()
-        if (registerer is ModernEnchantmentRegisterer) {
-            registerer.replaceRegistry()
-            }
-        super.onEnable()
     }
     
     override fun handleEnable() {
