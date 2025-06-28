@@ -83,7 +83,3 @@ allprojects {
         }
     }
 }
-
-gradle.buildFinished {
-    buildDir.deleteRecursively()
-}
