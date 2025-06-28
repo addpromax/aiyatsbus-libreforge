@@ -30,7 +30,7 @@ allprojects {
         maven {
             url = uri("https://repo.papermc.io/repository/maven-public/")
         }
-        maven("http://sacredcraft.cn:8081/repository/releases/") {
+        maven("https://repo.tabooproject.org/repository/releases") {
             isAllowInsecureProtocol = true
         }
     }
